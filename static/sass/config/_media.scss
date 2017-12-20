@@ -1,10 +1,10 @@
 // Mobile first approach!
-//$xs: "screen and (min-width: 0px)"
-$s: "screen and (min-width: 480px)";
-$m: "screen and (min-width: 928px)";
-$l: "screen and (min-width: 1080px)";
-$xl: "screen and (min-width: 1444px)";
+//$xs: 'screen and (min-width: 0px)'
+$s: 'screen and (min-width: 480px)';
+$m: 'screen and (min-width: 928px)';
+$l: 'screen and (min-width: 1080px)';
+$xl: 'screen and (min-width: 1444px)';
 
 
-$small: "screen and (max-width: 929px)";
-$big: "screen and (min-width: 930px)";
+$small: 'screen and (max-width: 929px)';
+$big: 'screen and (min-width: 930px)';

@@ -1,0 +1,24 @@
+.css-grid-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto auto;
+
+  > div {
+    color: $white;
+    font-size: 20px;
+    padding: 20px;
+  }
+
+  @for $i from 1 through 12 {
+    .item-#{$i} {
+      $bg-red: random(256) - 1;
+      $bg-green: random(256) - 1;
+      $bg-blue: random(256) - 1;
+      $bg: rgb($bg-red, $bg-green, $bg-blue);
+
+      background-color: $bg;
+    }
+  }
+}
+
