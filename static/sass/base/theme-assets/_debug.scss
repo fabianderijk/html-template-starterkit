@@ -1,0 +1,76 @@
+.debug {
+  .column, header, footer {
+    border: 1px solid $debug-border;
+  }
+
+  *[style] {
+    border: 5px solid $debug-border;
+  }
+
+  a:not([href]),
+  a[href="#"],
+  a[href=""],
+  a[href*="javascript:void(0)"],
+  a:empty,
+  button:empty {
+    border: 5px solid $debug-border;
+  }
+
+  img:not([alt]),
+  img[alt=""] {
+    border: 5px solid $debug-border;
+  }
+
+  &:not([lang]),
+  &[lang=""] {
+    border: 5px solid $debug-border;
+  }
+
+  head,
+  head *:not(title) {
+    display: block;
+  }
+
+  meta[charset]:not([charset="UTF-8"])::before {
+    content: " • Bad charset: " attr(charset) " ";
+    display: block;
+    color: $debug-border;
+  }
+  meta[charset]:not(:first-child)::after {
+    content: " • Bad charset: not first child";
+    color: $debug-border;
+  }
+
+  meta[name="viewport"][content*="user-scalable=no"]::after,
+  meta[name="viewport"][content*="maximum-scale"]::after,
+  meta[name="viewport"][content*="minimum-scale"]::after {
+    content: " • Bad viewport: " attr(content);
+    color: $debug-border;
+  }
+  script[type="text/javascript"]::before {
+    content: " • Unnecessary type attribute on script: " attr(type);
+    color: $debug-border;
+  }
+  link[rel="stylesheet"][type="text/css"]::before {
+    content: " • Unnecessary type attribute on link: " attr(type);
+    color: $debug-border;
+  }
+
+
+  input:not([id]),
+  select:not([id]),
+  textarea:not([id]),
+  input:not([name]),
+  select:not([name]),
+  textarea:not([name]) {
+    border: 5px solid $debug-border;
+  }
+
+  label:not([for]) {
+    border: 5px solid $debug-border;
+  }
+
+  form:not([name]):not([id]) {
+    border: 5px solid $debug-border;
+  }
+}

@@ -1,0 +1,72 @@
+// Large device, 3 columns <menu>/<blocks>/<blocks>, fluid layout, menu has a fixed width
+$grid-columns: 4;
+$grid-column-width: 217;
+$grid-gutter-width: $default-grid-gutter-width;
+
+@media #{$m} {
+  body {
+    &.debug {
+      border-top: 3px solid $m-debug-color;
+    }
+
+    .wrapper,
+    footer {
+      @include span-fluid-columns(4, false);
+    }
+
+    header {
+      @include span-fluid-columns(4, false);
+      margin: 0 auto;
+
+      nav {
+        display: block;
+      }
+
+      .logo {
+        img {
+          @include span-fluid-columns(2);
+          height: auto;
+        }
+      }
+    }
+
+    // Two sidebar layout
+    &.two-sidebars,
+    &.one-sidebar {
+      .wrapper {
+        @include flex('wrap');
+      }
+
+      .column.content {
+        @include flex-order(2);
+        @include span-fluid-columns(3, false);
+      }
+
+      .column.sidebar.first {
+        @include flex-order(1);
+        @include span-fluid-columns(1);
+      }
+
+      .column.sidebar.second {
+        @include flex-order(3);
+        @include span-fluid-columns(4, false);
+      }
+
+      &.content-left .wrapper {
+        .column.content {
+          @include flex-order(1);
+          @include span-fluid-spacing(true);
+        }
+
+        .column.sidebar.first {
+          @include flex-order(2);
+          @include span-fluid-spacing(false);
+        }
+
+        .column.sidebar.second {
+          @include flex-order(3);
+        }
+      }
+    }
+  }
+}

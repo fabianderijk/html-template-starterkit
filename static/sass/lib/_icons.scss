@@ -1,0 +1,25 @@
+// Ad a new icomoon character on a new line
+$fonticons: ();
+
+// For crisp icons use font-size: 16, 32, 64 etc
+$fonticons: append($fonticons, status '\e619');
+$fonticons: append($fonticons, error '\e61a');
+$fonticons: append($fonticons, warning '\e61b');
+$fonticons: append($fonticons, checked '\e00b');
+$fonticons: append($fonticons, unchecked '\e00c');
+$fonticons: append($fonticons, checked-dot '\e00d');
+
+$fonticons: append($fonticons, share '\ea82');
+$fonticons: append($fonticons, google-plus '\ea8b');
+$fonticons: append($fonticons, facebook '\ea90');
+$fonticons: append($fonticons, instagram '\ea92');
+$fonticons: append($fonticons, whatsapp '\ea93');
+$fonticons: append($fonticons, twitter '\ea96');
+$fonticons: append($fonticons, rss '\ea9b');
+$fonticons: append($fonticons, youtube '\ea9d');
+$fonticons: append($fonticons, vimeo '\eaa0');
+$fonticons: append($fonticons, tumblr '\eab9');
+$fonticons: append($fonticons, file-pdf '\eadf');
+$fonticons: append($fonticons, file-word '\eae1');
+$fonticons: append($fonticons, file-excel '\eae2');
+$fonticons: append($fonticons, hamburger '\e900');

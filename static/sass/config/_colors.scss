@@ -1,0 +1,25 @@
+$black: #000000;
+$white: #FFFFFF;
+
+$page-background-color: $white;
+$page-text-color: $black;
+
+$link-color: #00A8F6;
+$link-hover-color: #FD9674;
+
+// Forms
+@import "colors/forms";
+
+// Hamburger
+@import "colors/hamburger";
+
+// Message background colors
+@import "colors/messages";
+
+// DEBUG COLORS.
+@import "colors/debug";
+
+// RESET COLORS.
+$yellow: #FFFF00;
+$black: #000000;
+$silver: #C0C0C0;

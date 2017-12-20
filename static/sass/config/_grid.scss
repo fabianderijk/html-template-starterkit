@@ -1,0 +1,6 @@
+// default grid values
+$default-grid-columns: 12;
+$default-grid-column-width: 102;
+$default-grid-gutter-width: 20;
+
+$master-context-width: ($default-grid-column-width * $default-grid-columns) + ($default-grid-gutter-width * ($default-grid-columns - 1));

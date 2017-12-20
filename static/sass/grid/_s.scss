@@ -1,0 +1,33 @@
+// Small device landscape/large device potrait, 2 columns grid with small menu, <small menu>/<blocks>/<blocks>, fluid layout, menu has a fixed width
+$grid-columns: 4;
+$grid-column-width: 217;
+$grid-gutter-width: $default-grid-gutter-width;
+
+@media #{$s} {
+  body {
+    &.debug {
+      border-top: 3px solid $s-debug-color;
+    }
+
+    .wrapper,
+    footer {
+      @include span-fluid-columns(4, false);
+    }
+
+    header {
+      @include span-fluid-columns(4, false);
+      margin: 0 auto;
+
+      .logo {
+        img {
+          @include span-fluid-columns(2);
+          height: auto;
+        }
+      }
+
+      .header-top {
+        @include flex('wrap', 'space-between', 'flex-end');
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+a {
+  color: $link-color;
+  text-decoration: none;
+  transition: color $transition-time $easing;
+
+  &:hover {
+    color: $link-hover-color;
+  }
+}
+
+.alert-message {
+  color: $white;
+  margin-bottom: pxtorem($default-font-size);
+  padding: 10px 10px 10px 36px;
+  position: relative;
+
+  &:before {
+    left: 10px;
+    position: absolute;
+    top: 10px;
+  }
+
+  a {
+    color: $white;
+  }
+
+  &.status {
+    background: $message-status;
+
+    &:before {
+      @include icomoon('status');
+    }
+  }
+
+  &.warning {
+    background: $message-warning;
+
+    &:before {
+      @include icomoon('warning');
+    }
+  }
+
+  &.error {
+    background: $message-error;
+
+    &:before {
+      @include icomoon('error');
+    }
+  }
+}

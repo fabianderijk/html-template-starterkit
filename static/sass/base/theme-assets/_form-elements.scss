@@ -1,0 +1,150 @@
+form {
+  .form-item {
+    margin-bottom: pxtorem($default-font-size);
+  }
+
+  label {
+    display: block;
+    margin-bottom: pxtorem(4px);
+  }
+
+  .form-type-textarea, .form-type-text {
+    input, textarea {
+      width: 75%;
+    }
+  }
+
+  input, textarea, button, a.button {
+    background-color: $white;
+    border: 1px solid $button-border-color;
+    color: inherit;
+    display: inline-block;
+    padding: pxtorem(2px) pxtorem(8px);
+    text-decoration: none;
+
+    &:focus {
+      border: 1px solid $input-focus-border-color;
+      outline: none;
+    }
+  }
+
+  select {
+    font-size: 87.5%;
+
+    &:focus {
+      outline: 1px dotted $input-focus-border-color;
+    }
+  }
+
+  textarea {
+    height: pxtorem(100px);
+    padding: pxtorem(5px);
+    resize: none;
+    width: pxtorem(250px);
+  }
+
+  input,
+  button,
+  a.button {
+    height: pxtorem(30px);
+  }
+
+  textarea,
+  input {
+    border-radius: $input-border-radius;
+  }
+
+  // Fieldset
+  fieldset {
+    border: 1px dotted $fieldset-border-color;
+
+    legend {
+      padding: 0 pxtorem(5px);
+    }
+
+    &.container {
+      border: 0;
+      padding: 0;
+
+      legend {
+        margin-bottom: pxtorem(4px);
+        padding: 0;
+      }
+
+      .form-item {
+        margin-bottom: pxtorem(4px);
+      }
+    }
+  }
+
+  // radio buttons & checkboxes
+  input[type='checkbox'],
+  input[type='radio'] {
+    border: 0;
+    height: auto;
+
+    &:focus {
+      outline: 1px dotted $input-focus-border-color;
+    }
+  }
+
+  input[type='checkbox']:checked + label,
+  input[type='radio']:checked + label {
+    color: $checked-color;
+  }
+
+  .form-type-radios label {
+    display: inline;
+  }
+
+  input {
+    &[type='radio'],
+    &[type='checkbox'] {
+      opacity: 0;
+      position: absolute;
+
+      & + label:before {
+        @include icomoon('unchecked');
+        color: $check-icon-color;
+        padding-right: $icon-spacing;
+      }
+
+      &:focus + label:before {
+        color: $checked-color;
+      }
+
+      html.lt-ie9 & {
+        opacity: 1;
+        position: relative;
+
+        & + label:before {
+          content: '';
+          display: none;
+        }
+      }
+    }
+
+    &[type='checkbox'] {
+      &:checked + label:before {
+        @include icomoon('checked');
+      }
+    }
+
+    &[type='radio'] {
+      &:checked + label:before {
+        @include icomoon('checked-dot');
+      }
+    }
+  }
+
+  // buttons
+  button,
+  input[type="submit"],
+  input[type="button"],
+  input[type="reset"],
+  a.button {
+    @include button;
+    margin-right: pxtorem(3px);
+  }
+
+}

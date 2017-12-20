@@ -1,0 +1,90 @@
+// Small desktop, 3 columns <menu>/<blocks>/<blocks>, fixed layout
+$grid-columns: 12;
+$grid-column-width: 68;
+$grid-gutter-width: 24;
+
+@media #{$l} {
+  body {
+    &.debug {
+      border-top: 3px solid $l-debug-color;
+    }
+
+    .wrapper,
+    footer {
+      @include span-columns(12, false);
+      margin: 0 auto;
+    }
+
+    header {
+      @include span-columns(12, false);
+      margin: 0 auto;
+
+      .logo {
+        img {
+          @include span-columns(2);
+          height: auto;
+        }
+      }
+    }
+
+    // Two sidebar layout
+    &.two-sidebars {
+      .wrapper {
+        @include flex('wrap');
+      }
+
+      .column.content {
+        @include flex-order(2);
+        @include span-fluid-columns(6);
+      }
+
+      .column.sidebar.first {
+        @include flex-order(1);
+        @include span-fluid-columns(3);
+      }
+
+      .column.sidebar.second {
+        @include flex-order(3);
+        @include span-fluid-columns(3, false);
+      }
+
+      &.content-left .wrapper {
+        .column.sidebar.first {
+          @include span-fluid-spacing(true);
+        }
+      }
+
+      &.content-right .wrapper {
+        .column.content {
+          @include flex-order(3);
+          @include span-fluid-spacing(false);
+        }
+
+        .column.sidebar.first {
+          @include flex-order(1);
+          @include span-fluid-spacing(true);
+        }
+
+        .column.sidebar.second {
+          @include flex-order(2);
+          @include span-fluid-spacing(true);
+        }
+      }
+    }
+
+    // 1 sidebar layouts
+    &.one-sidebar {
+      .wrapper {
+        @include flex('wrap');
+      }
+
+      .column.content {
+        @include span-fluid-columns(9);
+      }
+
+      .column.sidebar.first {
+        @include span-fluid-columns(3);
+      }
+    }
+  }
+}

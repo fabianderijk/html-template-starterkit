@@ -1,0 +1,39 @@
+.hamburger-button {
+  background: $hamburger-bg;
+  cursor: pointer;
+  display: block;
+
+  &:before {
+    @include icomoon('hamburger');
+    color: $hamburger-icon;
+    font-size: pxtorem(32px);
+    position: relative;
+    top: 4px;
+  }
+
+  &.active {
+    background: $hamburger-active-bg;
+
+    &:before {
+      color: $hamburger-active-icon;
+    }
+  }
+}
+
+.hamburger {
+  position: relative;
+
+  .hamburger-inner {
+    background: $white;
+    border: 1px solid $page-text-color;
+    display: none;
+    overflow: hidden;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+
+    nav ul {
+      display: block;
+    }
+  }
+}

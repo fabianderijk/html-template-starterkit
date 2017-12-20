@@ -1,0 +1,7 @@
+footer {
+  nav {
+    > ul {
+      @include flex('wrap', 'space-between');
+    }
+  }
+}

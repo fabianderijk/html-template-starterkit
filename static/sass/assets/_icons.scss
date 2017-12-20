@@ -1,0 +1,57 @@
+.icon {
+  &:before {
+    margin-right: pxtorem(6px);
+  }
+
+  &.icon-share:before {
+    @include icomoon('share');
+  }
+
+  &.icon-gplus:before {
+    @include icomoon('google-plus');
+  }
+
+  &.icon-facebook:before {
+    @include icomoon('facebook');
+  }
+
+  &.icon-instagram:before {
+    @include icomoon('instagram');
+  }
+
+  &.icon-whatsapp:before {
+    @include icomoon('whatsapp');
+  }
+
+  &.icon-twitter:before {
+    @include icomoon('twitter');
+  }
+
+  &.icon-rss:before {
+    @include icomoon('rss');
+  }
+
+  &.icon-youtube:before {
+    @include icomoon('youtube');
+  }
+
+  &.icon-vimeo:before {
+    @include icomoon('vimeo');
+  }
+
+  &.icon-tumblr:before {
+    @include icomoon('tumblr');
+  }
+
+  &.icon-pdf:before {
+    @include icomoon('file-pdf');
+  }
+
+  &.icon-word:before {
+    @include icomoon('file-word');
+  }
+
+  &.icon-excel:before {
+    @include icomoon('file-excel');
+  }
+}

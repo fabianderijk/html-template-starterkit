@@ -1,0 +1,22 @@
+nav {
+  ul {
+    margin: 0;
+
+    li {
+      list-style: none outside;
+      margin: 0 10px 0 0;
+
+      a {
+        &:hover {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &.main-menu {
+    ul {
+      @include flex;
+    }
+  }
+}

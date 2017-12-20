@@ -1,0 +1,7 @@
+header {
+  .header-top {
+    .header-top-right {
+      @include flex('wrap', 'space-between', 'flex-end');
+    }
+  }
+}

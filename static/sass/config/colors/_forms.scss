@@ -1,0 +1,22 @@
+// Form colors.
+$royalblue: #4169e1;
+$silver: #C0C0C0;
+$orangered: #FF4500;
+$whitesmoke: #F5F5F5;
+$grey: #808080;
+
+// Buttons
+$button-border-color: $silver;
+$button-border-hover-color: $orangered;
+$button-font-color: $white;
+$button-background-color: $royalblue;
+
+$input-focus-border-color: $royalblue;
+$webkit-autofill-color: #F0FEFF;
+
+// Fieldset
+$fieldset-border-color: $button-border-color;
+
+// radio & checkboxes
+$checked-color: $input-focus-border-color;
+$check-icon-color: $grey;

@@ -1,0 +1,31 @@
+// Large desktop, 4 columns <menu>/<blocks>/<blocks>/<blocks>, fixed layout
+$grid-columns: $default-grid-columns;
+$grid-column-width: $default-grid-column-width;
+$grid-gutter-width: $default-grid-gutter-width;
+
+@media #{$xl} {
+  body {
+    &.debug {
+      border-top: 3px solid $xl-debug-color;
+    }
+
+    header,
+    .wrapper,
+    footer {
+      @include span-columns($default-grid-columns, false);
+      margin: 0 auto;
+    }
+
+    header {
+      @include span-columns($default-grid-columns, false);
+      margin: 0 auto;
+
+      .logo {
+        img {
+          @include span-columns(2, false);
+          height: auto;
+        }
+      }
+    }
+  }
+}

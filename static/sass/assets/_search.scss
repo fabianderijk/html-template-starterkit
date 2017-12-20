@@ -1,0 +1,16 @@
+.search-bar {
+  form {
+    @include flex('wrap');
+
+    label {
+      font-size: 0;
+      height: 0;
+      margin: 0;
+      width: 0;
+    }
+
+    .form-item {
+      margin: 0;
+    }
+  }
+}

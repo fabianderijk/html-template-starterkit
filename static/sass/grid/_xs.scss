@@ -1,0 +1,42 @@
+// Small device, 1 column grid with small menu, <small menu>/<blocks>, fluid layout, menu has a fixed width
+$grid-columns: 1;
+$grid-column-width: 385; // Maximum column width
+$grid-gutter-width: $default-grid-gutter-width;
+
+$xs-gutter: 16;
+
+body {
+  &.debug {
+    border-top: 3px solid $xs-debug-color;
+  }
+
+  .wrapper,
+  footer {
+    @include span-fluid-columns(1, false);
+    margin: 0 auto;
+  }
+
+  header {
+    @include span-fluid-columns(1, false);
+    margin: 0 auto;
+
+    nav {
+      display: none;
+    }
+
+    .hamburger nav {
+      display: block;
+    }
+
+    .logo {
+      img {
+        @include span-fluid-columns(1, false);
+        height: auto;
+      }
+    }
+
+    .hamburger-inner {
+      @include span-fluid-columns(1, false);
+    }
+  }
+}
