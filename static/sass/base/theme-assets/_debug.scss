@@ -8,21 +8,21 @@
   }
 
   a:not([href]),
-  a[href="#"],
-  a[href=""],
-  a[href*="javascript:void(0)"],
+  a[href='#'],
+  a[href=''],
+  a[href*='javascript:void(0)'],
   a:empty,
   button:empty {
     border: 5px solid $debug-border;
   }
 
   img:not([alt]),
-  img[alt=""] {
+  img[alt=''] {
     border: 5px solid $debug-border;
   }
 
   &:not([lang]),
-  &[lang=""] {
+  &[lang=''] {
     border: 5px solid $debug-border;
   }
 
@@ -31,29 +31,32 @@
     display: block;
   }
 
-  meta[charset]:not([charset="UTF-8"])::before {
-    content: " • Bad charset: " attr(charset) " ";
+  meta[charset]:not([charset='UTF-8'])::before {
+    color: $debug-border;
+    content: ' • Bad charset: ' attr(charset) ' ';
     display: block;
-    color: $debug-border;
-  }
-  meta[charset]:not(:first-child)::after {
-    content: " • Bad charset: not first child";
-    color: $debug-border;
   }
 
-  meta[name="viewport"][content*="user-scalable=no"]::after,
-  meta[name="viewport"][content*="maximum-scale"]::after,
-  meta[name="viewport"][content*="minimum-scale"]::after {
-    content: " • Bad viewport: " attr(content);
+  meta[charset]:not(:first-child)::after {
     color: $debug-border;
+    content: ' • Bad charset: not first child';
   }
-  script[type="text/javascript"]::before {
-    content: " • Unnecessary type attribute on script: " attr(type);
+
+  meta[name='viewport'][content*='user-scalable=no']::after,
+  meta[name='viewport'][content*='maximum-scale']::after,
+  meta[name='viewport'][content*='minimum-scale']::after {
     color: $debug-border;
+    content: ' • Bad viewport: ' attr(content);
   }
-  link[rel="stylesheet"][type="text/css"]::before {
-    content: " • Unnecessary type attribute on link: " attr(type);
+
+  script[type='text/javascript']::before {
     color: $debug-border;
+    content: ' • Unnecessary type attribute on script: ' attr(type);
+  }
+
+  link[rel='stylesheet'][type='text/css']::before {
+    color: $debug-border;
+    content: ' • Unnecessary type attribute on link: ' attr(type);
   }
 
 
