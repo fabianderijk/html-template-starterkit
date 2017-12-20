@@ -2,6 +2,9 @@
 
 This repo is a starter kit you can use to create your own project.
 
+## Demo
+Take a look at https://fabianderijk.github.io/html-template-starterkit/ for an example of the templates and styling.
+
 ## Included
 
 * Gulp
