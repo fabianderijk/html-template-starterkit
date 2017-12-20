@@ -1,4 +1,4 @@
-# 42 Bootstrap
+# HTML Template Starterkit
 
 This repo is a starter kit you can use to create your own project.
 
@@ -37,4 +37,4 @@ PageSpeed Insights is also enabled. You can run `gulp psi` to show pagespeed for
 
 ## Questions?
 
-Feel free to contact me on [fabian@finalist.com](mailto:fabian@finalist.com)
+Feel free to contact me on [f.de.rijk@youwe.nl](mailto:f.de.rijk@youwe.nl)
