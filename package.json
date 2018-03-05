@@ -11,6 +11,9 @@
     "browser-sync": "^2.19.0",
     "gulp-exit": "0.0.2",
     "gulp-livereload": "^3.8.1",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-through": "^0.4.0",
     "ngrok": "^2.2.24",
     "psi": "^3.0.0",
     "run-sequence": "^2.2.0"

@@ -27,4 +27,8 @@
     @include grid-align-item(justify, stretch);
     @include grid-align-item(align, stretch);
   }
+
+  .item-2 {
+    @include grid-area-item(sidebar-two);
+  }
 }

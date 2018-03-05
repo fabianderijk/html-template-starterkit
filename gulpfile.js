@@ -90,6 +90,7 @@ gulp.task('sass-compile', ['sass-lint'], function () {
 
   var task = gulp.src(project.staticFolder + '/sass/**/*.s+(a|c)ss') // Gets all files ending
   .pipe($.sourcemaps.init())
+  .pipe($.plumber({errorHandler: $.notify.onError("Error: <%= error.message %>")}))
   .pipe($.sass())
   .on('error', function (err) {
     console.log(err);
@@ -106,6 +107,12 @@ gulp.task('sass-compile', ['sass-lint'], function () {
   if (project.browserSync.enabled) {
     task.pipe(browserSync.stream());
   }
+
+  task.pipe($.notify({
+    title: 'sass-compile',
+    message: 'Finished compiling',
+    onLast: true
+  }));
 
   return task;
 });
