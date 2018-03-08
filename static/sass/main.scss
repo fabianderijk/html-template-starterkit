@@ -8,7 +8,12 @@
 // Import settings
 @import 'settings';
 
+// Import and set sprite default
+@import 'lib/sprite';
+$sprite: map-get($icons, sprite) !default;
+
 // Import libs
+@import 'lib/functions';
 @import 'lib/mixins';
 @import 'lib/reset';
 @import 'lib/fonts';
@@ -38,5 +43,6 @@
 @import 'assets/icons';
 
 // Import pages.
+@import 'pages/index';
 @import 'pages/css-grid';
 @import 'pages/flex-test';

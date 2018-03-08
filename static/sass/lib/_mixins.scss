@@ -9,6 +9,13 @@
   text-transform: none;
 }
 
+/// Assign the correct SVG background image and dimensions to the element
+%sprite {
+  background-image: url(map-get($sprite, svgPath));
+  background-size: pxtoem(map-get($sprite, width)) pxtoem(map-get($sprite, height));
+  display: inline-block;
+}
+
 //  ICOMOON
 //  Generates an icon for use in pseudo-elements
 //
@@ -40,6 +47,56 @@
     @if $name == $itemname {
       content: $char;
     }
+  }
+}
+
+/// Add an SVG sprite icon using em positioning
+/// @param {string} $icon - The name of the icon
+/// @param {string} $type [all] - The properties wanted (can be `all`, `size` or `bg`).
+/// - `all` ensures the icon has the background, position and size.
+/// - `size` is just for dimensions
+/// - `bg` just  applies the backgrounds to an element
+/// @example scss - Usage
+/// .class {
+/// 	@include sprite(arrow);
+/// 	&:hover {
+/// 		@include sprite(arrowDown, bg)
+/// 	}
+/// }
+///
+/// @example css - Output
+/// .class {
+/// 	display: inline-block;
+/// 	background-image: url("../img/sprite.svg");
+/// 	background-size: 34.25em 32.1875em;
+/// }
+///
+///
+/// .class {
+/// 	width: 1.3125em;
+/// 	height: 1.3125em;
+/// 	background-position: -0.3125em -0.3125em;
+/// }
+/// .class:hover {
+/// 	background-position: -2.25em -2.25em;
+/// }
+@mixin sprite($icon, $type: all) {
+  @if $type == all {
+    // Shares the backgrounds
+    @extend %sprite;
+  }
+
+  $icon-map: icon-attr($icon);
+
+  // Outputs dimensions in em
+  @if $type == all or $type == size {
+    height: pxtoem(map-get($icon-map, height) + 1);
+    width: pxtoem(map-get($icon-map, width) + 1);
+  }
+
+  // Outputs background position in em
+  @if $type == all or $type == bg {
+    background-position: pxtoem(map-get($icon-map, x) - 5) pxtoem(map-get($icon-map, y) - 5);
   }
 }
 

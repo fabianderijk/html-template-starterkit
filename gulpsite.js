@@ -6,5 +6,14 @@ module.exports = {
     enabled: true,
     logLevel: 'info',
     open: 'local'
+  },
+  paths: {
+    sprite: {
+      src: 'static/sprite/*',
+      svg: 'static/images/sprite.svg'
+    },
+    templates: {
+      src: 'static/tpl/'
+    }
   }
 };

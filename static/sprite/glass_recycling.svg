@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+<g>
+	<g>
+		<path fill="#75EA9C" d="M31,10c0,0,0,17-3,17H13c-3,0-3-17-3-17H31z"/>
+		<path fill="#A4FFBE" d="M31,5v5H10V5c0,0,0-4,4-4h13C27,1,31,1,31,5"/>
+		<path fill="#75EA9C" d="M14,1v5c0,0,0,2,2,2h9c0,0,2,0,2-2V1H14z"/>
+		<path fill="#4D5152" d="M26.996,2C27.502,2.006,30,2.18,30,5v4H11V5.006C11.006,4.504,11.177,2,14,2H26.996 M27,1H14c-4,0-4,4-4,4
+			v4v1h21V5C31,1,27,1,27,1"/>
+		<path fill="#4D5152" d="M26,2v4c0,0.805-0.55,0.988-1,1h-9c-0.805,0-0.988-0.55-1-1V2H26 M27,1H14v5c0,0,0,2,2,2h9c0,0,2,0,2-2V1z
+			"/>
+		<path fill="#4D5152" d="M30,10c0,7.826-0.957,15.251-2.056,16H13.056c-1.117-0.756-2.055-8.035-2.056-16H30 M31,9H10v1
+			c0,0,0,17,3,17h15c3,0,3-17,3-17V9z"/>
+		<path fill="#ACF0F2" d="M14,19v10c0,0,0,2-2,2H4c-2,0-2-2-2-2V19c0,0,0-2,2-3c1.36-0.68,1.8-2.75,1.94-4H5V8h6v4h-0.94
+			c0.14,1.25,0.58,3.32,1.94,4C14,17,14,19,14,19"/>
+		<rect x="5" y="8" fill="#AAAAAA" width="6" height="4"/>
+		<g opacity="0.6">
+			<g>
+				<defs>
+					<rect id="SVGID_1_" x="2" y="20" width="12" height="9"/>
+				</defs>
+				<clipPath id="SVGID_2_">
+					<use xlink:href="#SVGID_1_"  overflow="visible"/>
+				</clipPath>
+				<polygon clip-path="url(#SVGID_2_)" fill="#FFFFFF" points="2,25 2,29 14,24 14,20 				"/>
+			</g>
+		</g>
+		<path fill="#4D5152" d="M12,16c-1.36-0.68-1.8-2.75-1.94-4H11V8H5v4h0.94C5.8,13.25,5.36,15.32,4,16c-2,1-2,3-2,3v10c0,0,0,2,2,2
+			h8c2,0,2-2,2-2V19C14,19,14,17,12,16 M6,9h4v2H6V9z M13,28.99C12.99,29.45,12.81,30,12,30H4c-0.81,0-0.99-0.55-1-1V19
+			c0-0.01,0.02-1.39,1.45-2.11C6.28,15.98,6.8,13.44,6.94,12h2.12c0.141,1.44,0.65,3.98,2.49,4.89C12.95,17.59,13,18.95,13,19V28.99
+			z"/>
+		<path fill="#4D5152" d="M4.5,24C4.224,24,4,23.776,4,23.5v-4C4,19.224,4.224,19,4.5,19S5,19.224,5,19.5v4
+			C5,23.776,4.776,24,4.5,24"/>
+		<path fill="#4D5152" d="M4.5,28C4.224,28,4,27.776,4,27.5v-2C4,25.224,4.224,25,4.5,25S5,25.224,5,25.5v2
+			C5,27.776,4.776,28,4.5,28"/>
+	</g>
+</g>
+</svg>

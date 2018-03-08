@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
+var svgSprite = require('gulp-svg-sprite');
 var del = require('del');
 var autoprefixer = require('autoprefixer');
 var browserSync = require('browser-sync').create();
@@ -62,6 +63,35 @@ gulp.task('browser-sync-psi', function() {
       baseDir: '.'
     }
   });
+});
+
+gulp.task('sprite', function() {
+  return gulp.src(project.paths.sprite.src)
+  .pipe(svgSprite({
+    shape: {
+      spacing: {
+        padding: 5
+      }
+    },
+    mode: {
+      css: {
+        dest: "./",
+        layout: "diagonal",
+        sprite: project.paths.sprite.svg,
+        bust: false,
+        render: {
+          scss: {
+            dest: project.staticFolder + "/sass/lib/_sprite.scss",
+            template: project.paths.templates.src + "/sprite-template.scss"
+          }
+        }
+      }
+    },
+    variables: {
+      mapname: "icons"
+    }
+  }))
+  .pipe(gulp.dest('./'));
 });
 
 /**
@@ -227,7 +257,7 @@ gulp.task('clean', function () {
  * @task watch
  * Watch files and do stuff.
  */
-gulp.task('watch', ['clean', 'sass-compile', 'js', 'js-lib', 'js-assets', 'js-managers'], function () {
+gulp.task('watch', ['clean', 'sass-compile', 'js', 'js-lib', 'js-assets', 'js-managers', 'sprite'], function () {
   if (project.browserSync.enabled) {
     browserSync.init({
       server: './',
@@ -239,6 +269,7 @@ gulp.task('watch', ['clean', 'sass-compile', 'js', 'js-lib', 'js-assets', 'js-ma
   gulp.watch("*.html").on("change", browserSync.reload);
   gulp.watch(project.staticFolder + '/sass/**/*.+(scss|sass)', ['sass-compile']);
   gulp.watch(project.staticFolder + '/js-src/**/*.js', ['js', 'js-lib', 'js-assets', 'js-managers']);
+  gulp.watch(project.paths.sprite.src, ['sprite']);
 });
 
 gulp.task('psi', ['psi-seq'], function() {

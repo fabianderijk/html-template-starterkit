@@ -2,10 +2,10 @@
   > div {
     @include flex('nowrap', 'flex-start', 'stretch');
     align-content: flex-start;
-    
+
     > div {
       @include flex-grow(1);
-      border: 1px solid red;
+      border: 1px solid $debug-border;
 
       &.colspan-5 {
         @include flex-grow(5);
