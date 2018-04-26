@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <title>html starterkit - forms</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="html-template-starterkit/static/images/favicon.ico">
+  <link rel="stylesheet" href="html-template-starterkit/static/css/main.css" media="all"/>
+</head>
+<body class="two-sidebars content-middle">
+
+<header>
+  <div class="header-top">
+    <div class="logo">
+      <a href="/" title="Return to homepage">
+        <img src="html-template-starterkit/static/images/logo.svg" alt="Website logo" />
+      </a>
+    </div>
+
+    <div class="header-top-right">
+      <div class="search-bar">
+        <form name="search-form">
+          <div class="form-item">
+            <label for="search">Keywords</label>
+            <input type="text" id="search" name="search" placeholder="Type keywords..." />
+          </div>
+          <div class="form-actions">
+            <input type="submit" value="Search" id="search-btn" name="search-btn" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <nav class="main-menu">
+    <ul>
+      <li><a href="html-template-starterkit/">Home</a></li>
+      <li><a href="html-template-starterkit/forms.html">Forms</a></li>
+      <li><a href="html-template-starterkit/elements.html">Page elements</a></li>
+      <li><a href="html-template-starterkit/css-grid.html">CSS grid</a></li>
+    </ul>
+    </ul>
+  </nav>
+</header>
+
+<div class="wrapper">
+  <section class="content column">
+    <h1>Forms</h1>
+    <form id="test-form">
+      <fieldset class="form-item container">
+        <legend>Name & address</legend>
+        <div class="container-inner">
+          <div class="form-item form-type-text required">
+            <label for="textfield">Name:</label>
+            <input type="text" id="name" required name="name" placeholder="Name" />
+          </div>
+          <div class="form-item form-type-text required">
+            <label for="textfield">Address:</label>
+            <input type="text" id="address" required name="address" placeholder="Address" />
+          </div>
+          <div class="form-item form-type-text required">
+            <label for="textfield">City:</label>
+            <input type="text" id="city" required name="city" placeholder="City" />
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="form-item form-type-text required">
+        <label for="textfield">Textfield:</label>
+        <input type="text" id="textfield" required name="textfield" placeholder="Placeholder" />
+      </div>
+
+      <div class="form-item form-type-radios">
+        <fieldset class="container">
+          <legend>Radio buttons</legend>
+          <div class="container-inner">
+            <div class="form-item form-type-radio">
+              <input type="radio" name="radio-choice" id="radio-choice-1" tabindex="2" value="choice-1">
+              <label for="radio-choice-1">Choice 1</label>
+            </div>
+
+            <div class="form-item form-type-radio">
+              <input type="radio" name="radio-choice" id="radio-choice-2" tabindex="3" value="choice-2">
+              <label for="radio-choice-2">Choice 2</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="form-item form-type-select required">
+        <label for="select-choice">Selectbox:</label>
+        <select name="select-choice" id="select-choice">
+          <option value="Choice 1">Choice 1</option>
+          <option value="Choice 2">Choice 2</option>
+          <option value="Choice 3">Choice 3</option>
+        </select>
+      </div>
+
+      <div class="form-item form-type-textarea required">
+        <label for="textarea">Textarea:</label>
+        <textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
+      </div>
+
+      <div class="form-item form-type-checkbox required">
+        <input type="checkbox" name="checkbox" id="checkbox">
+        <label for="checkbox">Single checkbox</label>
+      </div>
+
+      <div class="form-item form-type-checkboxes required">
+        <fieldset class="container">
+          <legend>Multiple checkboxes</legend>
+          <div class="container-inner">
+            <div class="form-item form-type-checkbox required">
+              <input type="checkbox" name="checkbox-1" id="checkbox-1">
+              <label for="checkbox-1">Checkbox 1</label>
+            </div>
+            <div class="form-item form-type-checkbox required">
+              <input type="checkbox" name="checkbox-2" id="checkbox-2">
+              <label for="checkbox-2">Checkbox 2</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="form-actions">
+        <input type="reset" value="Reset" id="reset-btn" name="reset-btn" />
+        <input type="submit" value="Search" id="submit-btn" name="submit-btn" />
+        <button>Button</button>
+      </div>
+    </form>
+
+  </section>
+  <aside class="column sidebar first">
+    <div class="block">
+      <h3>Block title SB1</h3>
+      <div class="content">
+        <p>But they're very easily killed. Clouds are delicate. A little happy sunlight shining through there. I like to beat the brush.</p>
+      </div>
+    </div>
+
+    <div class="block">
+      <h3>Form in sidebar 1</h3>
+      <div class="content">
+        <form name="search-form-sidebar">
+          <div class="form-item required">
+            <label for="sidebar-form">Sidebar form</label>
+            <input type="text" id="sidebar-form" name="sidebar-form" placeholder="Placeholder" />
+          </div>
+          <div class="form-actions">
+            <input type="submit" value="Search" id="search-btn-sidebar" name="search-btn-sidebar" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </aside>
+  <aside class="column sidebar second">
+    <div class="block">
+      <h3>Block title SB2</h3>
+      <div class="content">
+        <p>But they're very easily killed. Clouds are delicate. A little happy sunlight shining through there. I like to beat the brush.</p>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <nav>
+    <ul>
+      <li>
+        <a href="#">Menu item 1</a>
+        <ul>
+          <li><a href="#">Menu item 1.1</a></li>
+          <li><a href="#">Menu item 1.2</a></li>
+          <li><a href="#">Menu item 1.3</a></li>
+          <li><a href="#">Menu item 1.4</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Menu item 2</a>
+        <ul>
+          <li><a href="#">Menu item 2.1</a></li>
+          <li><a href="#">Menu item 2.2</a></li>
+          <li><a href="#">Menu item 2.3</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Menu item 3</a></li>
+      <li><a href="#">Menu item 4</a></li>
+      <li>
+        <a href="#">Menu item 5</a>
+        <ul>
+          <li><a href="#">Menu item 5.1</a></li>
+          <li><a href="#">Menu item 5.2</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</footer>
+
+<script src="//code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="static/js/main.lib.js"></script>
+<script src="static/js/main.managers.js"></script>
+<script src="static/js/main.assets.js"></script>
+<script src="static/js/main.js"></script>
+
+</body>
+</html>
